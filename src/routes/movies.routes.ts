@@ -75,28 +75,4 @@ router.get("/year/:year", async (req: Request, res: Response): Promise<void> => 
   res.status(200).send(movie_list);
 });
 
-/*
-   TODO: remove when done testing
- */
-router.get("/:movie_id", async (req: Request, res: Response): Promise<void> => {
-  const config: AxiosRequestConfig = {
-    headers: {
-      'Accept': 'application/json',
-      'Authorization': `Bearer ${process.env.TMDB_ACCESS_TOKEN}`
-    } as RawAxiosRequestHeaders,
-  };
-  let title: string = "title not found";
-
-  try {
-    const searchResponse: AxiosResponse = await tmdb_client.get(`/movie/${req.params.movie_id}`, config);
-    title = searchResponse.data.title;
-
-    console.log(`movie title: "${title}"`)
-  } catch(err) {
-    console.log(err);
-  }
-
-   res.status(200).send({"year": req.params.year, "title": title});
-});
-
 export { router };
