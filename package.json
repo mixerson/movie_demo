@@ -4,8 +4,9 @@
   "description": "cvs-coding-assessment",
   "main": "index.js",
   "scripts": {
-    "test": "jest --coverage",
+    "start": "npx ts-node ./src/server.ts",
     "dev": "nodemon ./src/server.ts",
+    "test": "jest --coverage",
     "build": "tsc"
   },
   "keywords": [
