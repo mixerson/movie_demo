@@ -6,7 +6,6 @@ Sample node/express app to get movie info by release year
 - I couldn't find out how to get a new access token from my api key so all requests use the api_key parameter
   - NOTE: requests work with my bearer token from my TMDB account, but I couldn't generate a new one from the api
 - something with my git setup wouldn't let me push to the gist fork, so I created a new repo in my account
-- inconsistent naming is due to my brain still stuck in python-land
 
 ## Setup
 - clone the repo and run `npm install`
